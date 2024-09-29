@@ -70,13 +70,13 @@ btnSend.addEventListener('click', () => {
         if (message.trim () !== '') {
             createMessage (message, 'out');
             websocket.send (message);
+            input.value = '';
         } else {
             alert ('Введите сообщение!');
         };
     } else {
         alert ('Установите соединение!');
     };
-    input.value = '';
 });
 
 btnDisconnect.addEventListener('click', () => {
